@@ -5,18 +5,13 @@ package com.nowcoder;
  */
 public class ReplaceSpace {
 	public static void main(String[] args) {
-		StringBuffer sb = new StringBuffer("We are family");
+		StringBuffer sb = new StringBuffer();
 		System.out.println(ReplaceSpace(sb));
 	}
 
-	static String ReplaceSpace(StringBuffer stringBuffer) {
-		char[] s = " ".toCharArray();
-		for (int i = 0; i < stringBuffer.length() ; i++) {
-			if (s.equals(stringBuffer.charAt(i)))
-			{
-				stringBuffer.replace(i,i,"%20");
-			}
-		}
-		return stringBuffer.toString();
+	static String ReplaceSpace(StringBuffer str) {
+		 String s = str.toString().replaceAll(" ", "%20");
+
+		return s;
 	}
 }
